@@ -16,9 +16,6 @@ finding the "best fit" soil profile for each crop.
 
 import math
 
-# ── Ideal N-P-K centroids for each crop (kg/ha or %) ──────────────────────────
-# Source: Agri-encyclopaedia + agronomic research baselines.
-# The vector represents [Nitrogen, Phosphorus, Potassium].
 CROP_CENTROIDS: dict[str, list[float]] = {
     "Ginger":             [60, 50, 80],
     "Cowpea (Legume)":    [20, 40, 20],

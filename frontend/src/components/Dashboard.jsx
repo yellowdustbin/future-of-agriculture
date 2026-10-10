@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-/* ================================================================
-   INLINE SVG ICONS (Lucide-style, no emoji anywhere)
-   ================================================================ */
+
 const Icon = {
     alert: <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#EF4444" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" x2="12" y1="9" y2="13"/><line x1="12" x2="12.01" y1="17" y2="17"/></svg>,
     thermometer: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/></svg>,
@@ -18,10 +16,7 @@ const Icon = {
     wheat: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M2 22 16 8"/><path d="M3.47 12.53 5 11l1.53 1.53a3.5 3.5 0 0 1 0 4.94L5 19l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M7.47 8.53 9 7l1.53 1.53a3.5 3.5 0 0 1 0 4.94L9 15l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/><path d="M11.47 4.53 13 3l1.53 1.53a3.5 3.5 0 0 1 0 4.94L13 11l-1.53-1.53a3.5 3.5 0 0 1 0-4.94Z"/></svg>,
 };
 
-/* ================================================================
-   DONUT CHART — Depletion Engine
-   Animated circular gauge showing "Days of Water Remaining"
-   ================================================================ */
+
 const DonutChart = ({ value, max = 30, size = 180, unit = 'days left', strokeColor, badgeLabel, badgeBg, badgeBorder }) => {
     const [animatedPct, setAnimatedPct] = useState(0);
     const pct = Math.min(Math.max(value / max, 0), 1);

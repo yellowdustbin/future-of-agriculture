@@ -19,9 +19,6 @@ from fastapi import APIRouter, HTTPException
 # ── Router ─────────────────────────────────────────────────────────────────────
 router = APIRouter(prefix="/encyclopedia", tags=["Agri Encyclopedia"])
 
-# ── Path to the data file ──────────────────────────────────────────────────────
-# __file__ = backend/routers/encyclopedia.py
-# We go up two levels (..) to reach the project root, then into backend/data/
 _ENCYCLOPEDIA_PATH = os.path.join(
     os.path.dirname(__file__),   # backend/routers/
     "..",                         # backend/

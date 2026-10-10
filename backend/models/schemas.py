@@ -7,9 +7,7 @@ from pydantic import BaseModel, Field
 from typing import Dict, List, Optional
 
 
-# ─────────────────────────────────────────────
-# /predict  – Resource Depletion
-# ─────────────────────────────────────────────
+
 
 class PredictRequest(BaseModel):
     water_level: float = Field(..., gt=0, description="Current water level in litres")
